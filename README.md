@@ -2,15 +2,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#toolchain-installation">Toolchain Installation</a></li>
-    <li><a href="#getting-startted">Getting Started</a></li>
-    <li><a href="#resources">Resources</a></li>
-  </ol>
-</details>
+
 
 
 <!-- ABOUT THE PROJECT -->
