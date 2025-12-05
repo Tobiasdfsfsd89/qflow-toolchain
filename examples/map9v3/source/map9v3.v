@@ -1,9 +1,21 @@
-git clone https://github.com/ts-manuel/qflow-toolchain.git
-cd VLSIProject
-rm -rf .git
-git init
-git add .
-git commit -m "Initial commit - my own copy"
-git remote add origin https://github.com/Tobiasdfsfsd89
-/VLSIProject.git
-git push -u origin main
+module shift_reg_4bit (
+    input       clock,
+    input       reset,      // active-high reset
+    input       din,        // serial input bit
+    output reg [3:0] q      // shift register output
+);
+
+always @(posedge clock or posedge reset) begin
+    if (reset) begin
+        q <= 4'b0000;
+    end else begin
+        // Shift right
+        q[3] <= q[2];
+        q[2] <= q[1];
+        q[1] <= q[0];
+        q[0] <= din;   // new incoming bit
+    end
+end
+
+endmodule
+
